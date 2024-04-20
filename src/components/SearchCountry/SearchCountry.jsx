@@ -51,7 +51,6 @@ const SearchCountry = ({ onCountryChange }) => {
             <div onClick={(e) => e.stopPropagation()}>
                 <div className={styles.searchWrapper}>
                     <input
-                        placeholder='Search your city'
                         value={searchCountry}
                         onChange={handleSearchCountry}
                         className={styles.input}
@@ -64,7 +63,6 @@ const SearchCountry = ({ onCountryChange }) => {
                             viewBox='0 0 24 24'
                             strokeWidth={1.5}
                             stroke='currentColor'
-                            style={{ height: '30px' }}
                         >
                             <path
                                 strokeLinecap='round'

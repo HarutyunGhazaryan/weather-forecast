@@ -8,10 +8,14 @@ const CurrentData = ({ selectedCountry }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const weatherData = await fetchCurrentWeather(selectedCountry);
-                setWeather(weatherData);
+                if (selectedCountry) {
+                    const weatherData = await fetchCurrentWeather(
+                        selectedCountry,
+                    );
+                    setWeather(weatherData);
+                }
             } catch (error) {
-                console.error('Error fetching countries:', error);
+                console.error('Error fetching data:', error);
             }
         };
         fetchData();
